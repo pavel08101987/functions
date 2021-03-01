@@ -34,6 +34,57 @@ void ShiftLeft(int arr[], const int n, const int number)
 
 }
 
+void Sum(int arr[], const int n)
+{
+	int sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+     sum += arr[i];
+	}
+	cout << "сумма элементов массивы: " << sum << endl;
+
+}
+
+void Avg(int arr[], const int n)
+{
+	double sumsr = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sumsr += arr[i];
+
+	}
+	cout << "среднеарифметическое массива: " << sumsr / n << endl;
+}
+
+void minValueIn(int arr[], const int n)
+{
+	int min_number = arr[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] < min_number)
+		{
+			min_number = arr[i];
+		}
+
+	}
+	cout << "минимальное число: " << min_number << endl;
+}
+
+void maxValueIn(int arr[], const int n)
+{
+	int max_number = arr[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] > max_number)
+		{
+			max_number = arr[i];
+		}
+
+	}
+	cout << "максимальное число: " << max_number << endl;
+
+}
+
 
 void main()
 {
@@ -54,6 +105,11 @@ void main()
 	}
 	cout << endl;*/
 	Print(arr, n);
+	Sum(arr, n);
+	Avg(arr, n);
+	minValueIn(arr, n);
+	maxValueIn(arr, n);
+
 	//сдвиг массива
 
 	int number;
@@ -78,6 +134,7 @@ void main()
 	}
 	cout << endl;*/ 
 	Print(arr, n);
+	cout << endl;
 
 	////////
 
@@ -95,6 +152,12 @@ void main()
 	}
 	cout << endl;*/
 	Print(brr, m);
+	Sum(brr, m);
+	Avg(brr, m);
+	minValueIn(brr, m);
+	maxValueIn(brr, m);
+
+	//сдвиг массива
 	cout << "введите количество: "; cin >> number;
 	/*for (int i = 0; i < number; i++)
 	{

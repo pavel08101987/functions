@@ -34,6 +34,21 @@ void ShiftLeft(int arr[], const int n, const int number)
 
 }
 
+void ShiftR(int arr[], const int n, const int number)
+{
+	for (int i = 0; i < number; i++)
+	{
+		int buffer = arr[n-1];
+		for (int j = n-1; j>0; j--)
+		{
+			arr[j] = arr[j - 1];
+
+		}
+		arr[0] = buffer;
+
+	}
+}
+
 void Sum(int arr[], const int n)
 {
 	int sum = 0;
@@ -135,6 +150,13 @@ void main()
 	cout << endl;*/ 
 	Print(arr, n);
 	cout << endl;
+	cout << "сдвиг в право: " << endl;
+	Print(arr, n);
+	cout << endl;
+	cout << "введите количество: "; cin >> number;
+	ShiftR(arr, n, number);
+	Print(arr, n);
+	cout << endl;
 
 	////////
 
@@ -177,5 +199,12 @@ void main()
 	}
 	cout << endl;*/
 	Print(brr, m);
+	cout << "сдвиг в право: " << endl;
+	Print(brr, m);
+	cout << endl;
+	cout << "введите количество: "; cin >> number;
+	ShiftR(brr, m, number);
+	Print(brr, m);
+	cout << endl;
 
 }

@@ -100,6 +100,24 @@ void maxValueIn(int arr[], const int n)
 
 }
 
+void Sort(int arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (arr[j] < arr[i])
+			{
+				int buffer = arr[i];
+				arr[i] = arr[j];
+				arr[j] = buffer;
+			}
+		}
+
+	}
+
+}
+
 
 void main()
 {
@@ -157,6 +175,8 @@ void main()
 	ShiftR(arr, n, number);
 	Print(arr, n);
 	cout << endl;
+	Sort(arr, n);
+	Print(arr, n);
 
 	////////
 
@@ -206,5 +226,7 @@ void main()
 	ShiftR(brr, m, number);
 	Print(brr, m);
 	cout << endl;
+	Sort(brr, m);
+	Print(brr, m);
 
 }

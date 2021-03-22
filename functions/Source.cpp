@@ -12,6 +12,7 @@ void fillRand(double arr[], const int n)
 	for (int i = 0; i < n; i++)
 	{
 		arr[i] = rand();
+		arr[i] /= 10;
 	}
 }
 
@@ -286,66 +287,14 @@ void main()
 	Sort(arr, n);
 	Print(arr, n);
 
-	double arr[n];
-	/*for (int i = 0; i < n; i++)
-	{
-		arr[i] = rand();
-
-	}*/
-	fillRand(arr, n);
-	/*for (int i = 0; i < n; i++)
-	{
-		cout << arr[i]<<" ";
-
-	}
-	cout << endl;*/
-	Print(arr, n);
-	Sum(arr, n);
-	Avg(arr, n);
-	minValueIn(arr, n);
-	maxValueIn(arr, n);
-
-	//сдвиг массива
-
-	double number;
-	cout << "введите количество: "; cin >> number;
-	/*for (int i = 0; i < number; i++)
-	{
-		int buffer = arr[0];
-		for (int j = 0; j < n; j++)
-		{
-			arr[j] = arr[j + 1];
-
-		}
-		arr[n - 1] = buffer;
-
-	}*/
-	ShiftLeft(arr, n, number);
-
-	/*for (int i = 0; i < n; i++)
-	{
-		cout << arr[i] << " ";
-
-	}
-	cout << endl;*/
-	Print(arr, n);
-	cout << endl;
-	cout << "сдвиг в право: " << endl;
-	Print(arr, n);
-	cout << endl;
-	cout << "введите количество: "; cin >> number;
-	ShiftR(arr, n, number);
-	Print(arr, n);
-	cout << endl;
-	Sort(arr, n);
-	Print(arr, n);
+	
 
 
 
 	////////
 
 	const int m = 8;
-	int brr[m];
+	double brr[m];
 	/*for (int i = 0; i < m; i++)
 	{
 		brr[i] = rand();

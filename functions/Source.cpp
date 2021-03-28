@@ -15,6 +15,15 @@ void fillRand(double arr[], const int n)
 		arr[i] /= 10;
 	}
 }
+void fillRand(float arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		arr[i] = rand();
+		arr[i] /= 10;
+	}
+}
+
 
 void Print(int arr[], const int n)
 {
@@ -33,6 +42,15 @@ void Print(double arr[], const int n)
 	}
 	cout << endl;
 }
+void Print(float arr[], const int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+}
+
 
 void ShiftLeft(int arr[], const int n, const int number)
 {
@@ -105,7 +123,16 @@ int Sum(int arr[], const int n)
 }
 double Sum(double arr[], const int n)
 {
-	int sum = 0;
+	double sum = 0;
+	for (int i = 0; i < n; i++)
+	{
+		sum += arr[i];
+	}
+	return sum;
+}
+float Sum(float arr[], const int n)
+{
+	float sum = 0;
 	for (int i = 0; i < n; i++)
 	{
 		sum += arr[i];
@@ -137,6 +164,19 @@ double Avg(double arr[], const int n)
 }
 
 int minValueIn(int arr[], const int n)
+{
+	int min_number = arr[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] < min_number)
+		{
+			min_number = arr[i];
+		}
+
+	}
+	return min_number;
+}
+float minValueIn(float arr[], const int n)
 {
 	int min_number = arr[0];
 	for (int i = 0; i < n; i++)
@@ -191,6 +231,21 @@ double maxValueIn(double arr[], const int n)
 	
 	return max_number;
 }
+float maxValueIn(float arr[], const int n)
+{
+	float max_number = arr[0];
+	for (int i = 0; i < n; i++)
+	{
+		if (arr[i] > max_number)
+		{
+			max_number = arr[i];
+		}
+
+	}
+	
+	return max_number;
+}
+
 
 void Sort(int arr[], const int n)
 {
@@ -226,6 +281,7 @@ void Sort(double arr[], const int n)
 	}
 
 }
+
 
 
 void main()
